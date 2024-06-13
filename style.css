@@ -64,7 +64,7 @@ body{
 }
 @media only screen and (max-width: 510px) {
     input#password {
-        font-size: 19px;
+        font-size: 15px;
         width: 80%;
     }
 }
