@@ -1,4 +1,5 @@
 body{
+    height: 100vh;
     background: linear-gradient(20deg, #0a3f61, #10222e,  #113f5c);
     color: #fff;
 }
@@ -63,7 +64,7 @@ body{
 }
 @media only screen and (max-width: 510px) {
     input#password {
-        font-size: 22px;
+        font-size: 19px;
         width: 80%;
     }
 }

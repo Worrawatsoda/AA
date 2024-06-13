@@ -23,23 +23,43 @@ const lenght = 12;
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const number = "0123456789";
-const symbol = "@#$%^&*()_+~|}{[]></-="
+const symbol = "@#$%^&*()_+~|}{[]></-=";
 
 const allChars = upperCase + lowerCase + number + symbol;
 
+
+const output = "สุ่มหาอะไรอยู่ จ๊ะ"
+const output1 = "สุ่มเยอะจางงง"
+const output2 = "พอแล้วม้างง @_@"
+const output3 = "กดไปเค้าก็ไม่กลับมาหรอก "
+const output4 = "อิอิ :p "
+var numbers = 0;
 function createPassword(){
+    
     let password = "";
     password +=upperCase[Math.floor(Math.random() * upperCase.length)];
     password +=lowerCase[Math.floor(Math.random() * lowerCase.length)];
     password +=number[Math.floor(Math.random() * number.length)];
     password +=symbol[Math.floor(Math.random() * symbol.length)];
-
     while(lenght > password.length){
-
         password += allChars[Math.floor(Math.random() * allChars.length)];
-
     }
-    passwordBox.value = password;
+    if(numbers == 1){
+        passwordBox.value = output;
+    }
+    else if(numbers == 4){
+        passwordBox.value = output1;
+    }
+    else if(numbers == 7){
+        passwordBox.value = output2;
+    }
+    else if(numbers == 10){
+        passwordBox.value = output3;
+    }
+    else {
+        passwordBox.value = password;
+    }
+    numbers++
 }
 
 function copyPassword(){
